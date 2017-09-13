@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+100.times do
+    Song.create(
+        title: Faker::Pokemon.move,
+        artist: Faker::Superhero.name,
+        rank: [1..100].sample,
+        genre: Faker::Lovecraft.word
+    )
+end
+
+puts "Created #{Song.count} songs"

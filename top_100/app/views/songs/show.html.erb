@@ -1,2 +1,19 @@
-<h1>Songs#show</h1>
-<p>Find me in app/views/songs/show.html.erb</p>
+<div class="col s5">
+    <div class="card small blue-grey darken-1">
+        <div class="card-content white-text">
+            <h4 class="card-title">Song Title: <%= @song.title %></h4>
+                <h6>Artist: <%= @song.artist %></h6>
+
+                <p>Genre: <%= @song.genre %></p>
+
+                <p>Rank: <%= @song.rank %></p>
+
+
+            <div class="card-action">
+                <%= link_to 'Back to Song List', songs_path %>
+                <%= link_to 'Edit song', edit_song_path(@song) %>
+                <%= link_to 'Delete song', song_path(@song), method: :delete %>
+            </div>
+        </div>
+    </div>
+</div>
