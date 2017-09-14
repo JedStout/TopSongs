@@ -10,7 +10,7 @@
     Song.create(
         title: Faker::Pokemon.move,
         artist: Faker::Superhero.name,
-        rank: [1..100].sample,
+        rank: Faker::Number.between(1, 100),
         genre: Faker::Lovecraft.word
     )
 end
