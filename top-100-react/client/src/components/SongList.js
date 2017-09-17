@@ -8,7 +8,7 @@ const SongList = ({ songs, updateSong, deleteSong }) => (
           key={song.id}
           updateSong={updateSong}
           deleteSong={deleteSong}
-          {...song}
+          { ...song}
         />
       )
     }

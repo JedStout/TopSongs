@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   updateSong = (id) => {
-    axios.put(`/api/Songs/${id}`)
+    axios.put(`/api/songs/${id}`)
       .then( res => {
         let songs = this.state.songs.map( song => {
           if (song.id === id)
